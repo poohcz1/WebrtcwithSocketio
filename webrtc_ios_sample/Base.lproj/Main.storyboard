@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="webrtc_ios_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghZ-BK-OaZ" userLabel="localView">
+                                <rect key="frame" x="0.0" y="149" width="414" height="248"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="Zs2-pE-6yy"/>
+                                    <constraint firstAttribute="width" constant="414" id="i60-mQ-hMi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ys6-aq-pNk" userLabel="remoteView">
+                                <rect key="frame" x="0.0" y="417" width="414" height="230"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="RlQ-cK-qne"/>
+                                    <constraint firstAttribute="height" constant="230" id="aLB-42-uq6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XB0-Ld-zW1" userLabel="buttonView">
+                                <rect key="frame" x="0.0" y="84" width="414" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gJp-kQ-lIh">
+                                        <rect key="frame" x="15" y="5" width="60" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Cjn-FY-6ZM"/>
+                                        </constraints>
+                                        <state key="normal" title="Con"/>
+                                        <connections>
+                                            <action selector="connectButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ocj-fV-Z5d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pBv-9X-bxE">
+                                        <rect key="frame" x="220" y="5" width="36" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="dpP-6f-LNc"/>
+                                        </constraints>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1p-qd-b7a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ohj-oN-1tM">
+                                        <rect key="frame" x="150" y="5" width="57" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="shp-4e-2bu"/>
+                                        </constraints>
+                                        <state key="normal" title="Reg"/>
+                                        <connections>
+                                            <action selector="RegisterButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o5V-sZ-BrK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y4S-FP-tjg" userLabel="Janus Btn">
+                                        <rect key="frame" x="270" y="5" width="41" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="u0A-67-o4A"/>
+                                        </constraints>
+                                        <state key="normal" title="Janus"/>
+                                        <connections>
+                                            <action selector="janusButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U7Q-lA-slL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nzS-so-PzI" userLabel="Pub Btn">
+                                        <rect key="frame" x="330" y="5" width="45" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="dSp-nc-klY"/>
+                                        </constraints>
+                                        <state key="normal" title="Pub"/>
+                                        <connections>
+                                            <action selector="pubButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pbu-Ov-PCT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Dv-dw-V4g">
+                                        <rect key="frame" x="70" y="5" width="70" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="TfJ-k6-Yza"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <state key="normal" title="Join"/>
+                                        <connections>
+                                            <action selector="RoomJoinButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IGc-sE-oLm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="2Dv-dw-V4g" firstAttribute="top" secondItem="XB0-Ld-zW1" secondAttribute="top" constant="5" id="0xj-pv-53k"/>
+                                    <constraint firstItem="pBv-9X-bxE" firstAttribute="leading" secondItem="Ohj-oN-1tM" secondAttribute="trailing" constant="15" id="1wq-Wd-8CN"/>
+                                    <constraint firstAttribute="bottom" secondItem="nzS-so-PzI" secondAttribute="bottom" constant="5" id="5AM-EA-1ma"/>
+                                    <constraint firstItem="gJp-kQ-lIh" firstAttribute="top" secondItem="XB0-Ld-zW1" secondAttribute="top" constant="5" id="6Hk-iG-gaU"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Dv-dw-V4g" secondAttribute="bottom" constant="-5" id="7Tj-hz-VQI"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Dv-dw-V4g" secondAttribute="bottom" constant="5" id="AhC-tg-9Vo"/>
+                                    <constraint firstAttribute="bottom" secondItem="pBv-9X-bxE" secondAttribute="bottom" constant="5" id="Fez-Vg-UmG"/>
+                                    <constraint firstItem="Y4S-FP-tjg" firstAttribute="leading" secondItem="pBv-9X-bxE" secondAttribute="trailing" constant="15" id="G48-0m-438"/>
+                                    <constraint firstItem="gJp-kQ-lIh" firstAttribute="leading" secondItem="XB0-Ld-zW1" secondAttribute="leading" constant="5" id="H5Z-nP-qvY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y4S-FP-tjg" secondAttribute="bottom" constant="5" id="Kio-iv-WsH"/>
+                                    <constraint firstItem="nzS-so-PzI" firstAttribute="leading" secondItem="Y4S-FP-tjg" secondAttribute="trailing" constant="15" id="M74-qv-niK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ohj-oN-1tM" secondAttribute="bottom" constant="5" id="MeG-KM-LlW"/>
+                                    <constraint firstItem="Ohj-oN-1tM" firstAttribute="leading" secondItem="2Dv-dw-V4g" secondAttribute="trailing" constant="15" id="NR2-9N-3lf"/>
+                                    <constraint firstItem="Ohj-oN-1tM" firstAttribute="top" secondItem="XB0-Ld-zW1" secondAttribute="top" constant="5" id="Vr0-Vd-7Eh"/>
+                                    <constraint firstItem="2Dv-dw-V4g" firstAttribute="leading" secondItem="gJp-kQ-lIh" secondAttribute="trailing" constant="15" id="Vtd-Rq-eZq"/>
+                                    <constraint firstItem="2Dv-dw-V4g" firstAttribute="leading" secondItem="gJp-kQ-lIh" secondAttribute="trailing" constant="5" id="YOK-3l-asS"/>
+                                    <constraint firstItem="2Dv-dw-V4g" firstAttribute="leading" secondItem="gJp-kQ-lIh" secondAttribute="trailing" constant="15" id="Z3X-C3-4fg"/>
+                                    <constraint firstItem="gJp-kQ-lIh" firstAttribute="leading" secondItem="XB0-Ld-zW1" secondAttribute="leading" constant="10" id="bMc-iq-jTp"/>
+                                    <constraint firstItem="Y4S-FP-tjg" firstAttribute="top" secondItem="XB0-Ld-zW1" secondAttribute="top" constant="5" id="dtv-oR-xV0"/>
+                                    <constraint firstItem="Ohj-oN-1tM" firstAttribute="leading" secondItem="2Dv-dw-V4g" secondAttribute="trailing" constant="5" id="ezm-tg-Kwi"/>
+                                    <constraint firstAttribute="bottom" secondItem="gJp-kQ-lIh" secondAttribute="bottom" constant="5" id="i1s-rT-9JJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="nzS-so-PzI" secondAttribute="trailing" constant="15" id="l4t-Br-xo6"/>
+                                    <constraint firstItem="gJp-kQ-lIh" firstAttribute="leading" secondItem="XB0-Ld-zW1" secondAttribute="leading" constant="15" id="mNi-9O-VB8"/>
+                                    <constraint firstItem="pBv-9X-bxE" firstAttribute="top" secondItem="XB0-Ld-zW1" secondAttribute="top" constant="5" id="orW-rw-j4l"/>
+                                    <constraint firstItem="nzS-so-PzI" firstAttribute="top" secondItem="XB0-Ld-zW1" secondAttribute="top" constant="5" id="rAY-9S-nxT"/>
+                                    <constraint firstItem="Ohj-oN-1tM" firstAttribute="leading" secondItem="2Dv-dw-V4g" secondAttribute="trailing" constant="15" id="rAo-af-pJv"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Dv-dw-V4g" secondAttribute="bottom" constant="9" id="vJX-RO-aFj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XB0-Ld-zW1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="9Fa-hq-sO2"/>
+                            <constraint firstItem="Ys6-aq-pNk" firstAttribute="top" secondItem="ghZ-BK-OaZ" secondAttribute="bottom" constant="20" id="IeW-ka-sBp"/>
+                            <constraint firstItem="ghZ-BK-OaZ" firstAttribute="top" secondItem="XB0-Ld-zW1" secondAttribute="bottom" constant="20" id="Uuu-F5-Tf8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ConnectBtn" destination="gJp-kQ-lIh" id="AE8-yV-Uhr"/>
+                        <outlet property="JanusBtn" destination="Y4S-FP-tjg" id="D1Q-eY-CJN"/>
+                        <outlet property="LocalView" destination="ghZ-BK-OaZ" id="WX2-FL-PWd"/>
+                        <outlet property="PubBtn" destination="nzS-so-PzI" id="feK-8f-pt5"/>
+                        <outlet property="RegisterBtn" destination="Ohj-oN-1tM" id="duJ-C6-mQT"/>
+                        <outlet property="RemoteView" destination="Ys6-aq-pNk" id="PfC-HI-e8e"/>
+                        <outlet property="RoomJoinBtn" destination="2Dv-dw-V4g" id="xbH-sQ-Pff"/>
+                        <outlet property="SendBtn" destination="pBv-9X-bxE" id="2RO-b9-IRl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
